@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Save It Settings</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-title">
+        <img src="../icons/icon48.png" width="24" height="24" style="border-radius: 4px;">
+        Settings
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="label" for="webhook-url">Webhook URL</label>
+      <input type="url" id="webhook-url" placeholder="https://your-webhook.com/endpoint" />
+      <div class="note">Enter the URL where you want to send the page data.</div>
+    </div>
+
+    <div class="section">
+      <label class="label" for="api-key">Anti-Phishing Key (Optional)</label>
+      <div style="display: flex; gap: 8px;">
+        <input type="text" id="api-key" placeholder="Leave empty or paste/generate a key" style="flex: 1;" />
+        <button id="generate-key-btn" class="btn" title="Generate random key">Generate</button>
+      </div>
+      <div class="note">Optional security key that will be sent with each webhook request. Use this to verify requests
+        are from your extension.</div>
+    </div>
+
+    <div class="section">
+      <button id="save-btn" class="btn btn-primary">Save Settings</button>
+      <span id="status"
+        style="margin-left: 10px; color: var(--text-secondary); opacity: 0; transition: opacity 0.3s; font-size: 13px;">Saved!</span>
+    </div>
+
+    <div class="footer">
+      Developed by <a href="https://seicho.group" target="_blank">Roberto Francisco</a>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+
+</html>
