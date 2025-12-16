@@ -1,0 +1,14 @@
+# Documentation (private)
+SECURITY_AUDIT.md
+WALKTHROUGH.md
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp
